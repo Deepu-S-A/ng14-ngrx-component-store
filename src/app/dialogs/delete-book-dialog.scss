@@ -1,0 +1,17 @@
+button {
+    height: 2rem;
+    margin-right: 1rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    min-width: 3rem;
+    cursor: pointer;
+    border-radius: 5px;
+    &.confirm{
+        background-color: rgb(112, 12, 12);
+        color: #fff;
+    }
+    &.cancel {
+        background-color: rgb(201, 180, 180);
+    }
+}

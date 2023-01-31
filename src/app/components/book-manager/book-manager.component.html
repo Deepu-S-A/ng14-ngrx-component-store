@@ -1,0 +1,22 @@
+<mat-toolbar color="primary">
+    Book Manager
+</mat-toolbar>
+<div class="book-manager-container">
+    <mat-toolbar class="author-info-wrap" color="primary">
+        <mat-toolbar-row>
+            <span>Author : {{author.name}},   DOB: {{author.birthday}},    {{author.placeOfBirth}}</span>
+            <span class="example-spacer"></span>
+            <mat-icon class="example-icon" aria-hidden="false" aria-label="Example user verified icon">verified_user</mat-icon>
+        </mat-toolbar-row>
+    </mat-toolbar>
+    <mat-form-field appearance="fill">
+        <mat-label>Sort by {{sortBy}}</mat-label>
+        <mat-select (selectionChange)="sortListBy($event.value)">
+            <mat-option value="title">Title</mat-option>
+            <mat-option value="publishedDate">Published date</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <div class="books-wrap">
+        <app-book *ngFor="let book of books$ | async" [book]="book" (tobeDeleted)="openDeleteBookDialog($event)"></app-book>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<mat-card class="book">
+  <mat-card-header>
+    <mat-card-title>{{book.title}}</mat-card-title>
+    <mat-card-subtitle>{{book.publishedDate}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image [src]="book.image" alt="Photo of a Shiba Inu">
+  <mat-card-actions>
+    <div class="action" (click)="tobeDeleted.emit(book)">
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">delete</mat-icon>
+      <div class="action-text">Delete</div>
+    </div>
+  </mat-card-actions>
+</mat-card>

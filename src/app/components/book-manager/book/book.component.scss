@@ -1,0 +1,19 @@
+.book {
+    padding: 1rem;
+    .mdc-card__media {
+        width: 12rem;
+        height: 10rem;
+        margin-left: 1rem;
+        margin-top: 1rem;
+    }
+    .action {
+        display: flex;
+        color: #c13f3f;
+        align-items: center;
+        cursor: pointer;
+    }
+    .action .action-text {
+        margin-left: 0.3rem;
+    }
+}
+
